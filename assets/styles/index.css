@@ -4,11 +4,16 @@
    
 }
 #button-add{
-    background-color: #3761FA;
-    border-color: #3761FA;
     height: 3rem;
     width: 3rem;
+    z-index: 1;
+    position: relative;
+    
 }
 #div-box{
     display: flex;
+}
+
+li {
+    list-style: none;
 }
