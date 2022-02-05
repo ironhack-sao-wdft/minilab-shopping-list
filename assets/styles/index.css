@@ -1,0 +1,20 @@
+#textBox{
+    height: 3rem;
+    width: 37rem;
+   
+}
+#button-add{
+
+    height: 3rem;
+    width: 3rem;
+    z-index: 1;
+    position: relative;
+    
+}
+#div-box{
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
