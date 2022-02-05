@@ -7,6 +7,8 @@ ul.addEventListener("load", renderList(listArr));
 
 addBtn.addEventListener("click", (_) => {
   addItem(addItemText.value);
+  addItemText.value = "";
+  addItemText.focus();
 });
 
 function addItem(item) {
@@ -21,6 +23,7 @@ function removeItem(item) {
 function renderList(arr) {
   ul.innerHTML = "";
   arr.map((current, index) => {
-    ul.innerHTML += `<li id='${index}' class="list-group-item d-flex justify-content-between">${current} <button class="btn btn btn-danger" onclick= "removeItem('${current}')" >-</button> </li>`;
+    const li = `<li id='${index}' class="list-group-item d-flex justify-content-between">${current} <button class="btn btn btn-danger" onclick= "removeItem('${current}')" >-</button> </li>`;
+    ul.insertAdjacentHTML("beforeend", li);
   });
 }
