@@ -1,0 +1,14 @@
+#textBox{
+    height: 3rem;
+    width: 37rem;
+   
+}
+#button-add{
+    background-color: #3761FA;
+    border-color: #3761FA;
+    height: 3rem;
+    width: 3rem;
+}
+#div-box{
+    display: flex;
+}
