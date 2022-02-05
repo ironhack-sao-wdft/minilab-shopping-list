@@ -2,21 +2,33 @@
 
 const textareaElement = document.getElementById("textBox");
 const buttonELement = document.getElementById("button-add");
-let product =document.getElementsByClassName("list-group-item")
-let list = document.getElementById("ul");
+const listElement = document.getElementById("ul");
 
-// 2. detectar o clique do botão
+function createNewItem(){
 
-buttonELement.addEventListener('click', () =>{
+  buttonELement.addEventListener("click", () => {
     if (textareaElement.value.length !== 0) {
-        let item = "<li class='list-group-item d-flex justify-content-between'>" + 
-            textareaElement.value + "<button  class= 'btn btn btn-danger' > -" + "</button>" + "</li>"; ;
-        list.innerHTML = list.innerHTML + item;
+      let item = `<li class='list-group-item d-flex justify-content-between'>
+            ${textareaElement.value}  <button  class= 'btn btn btn-danger' > - </button>  </li>`;
+      listElement.insertAdjacentHTML("beforeend", item);
+    }
+    textareaElement.value = "";
+
+    textareaElement.focus();
+  });
+}
+    createNewItem();
+
+
+document.addEventListener("click", (event) => {
+
+    const deleteButtonElement = event.target;
+
+    if(deleteButtonElement.classList.contains("btn-danger")){
+
+        const li = deleteButtonElement.parentElement;
+
+        listElement.removeChild(li);
     }
 });
-// extrair o que foi digitado
 
-
-// atualizar a lista de produtos
-
- 
