@@ -32,7 +32,10 @@
           </h1>
 
           <ul id="ul" class="list-group">
-            <li class="list-group-item d-flex justify-content-between">
+            <li
+              id="nodeClone"
+              class="list-group-item d-flex justify-content-between"
+            >
               Banana <button class="btn btn btn-danger">-</button>
             </li>
             <li class="list-group-item d-flex justify-content-between">
@@ -45,6 +48,14 @@
               Café <button class="btn btn btn-danger">-</button>
             </li>
           </ul>
+          <div class="d-flex justify-content-between">
+            <input id="itemInput" type="text" class="form-control" /><button
+              id="btn"
+              class="btn btn btn-primary"
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
     </div>
