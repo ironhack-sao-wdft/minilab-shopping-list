@@ -20,6 +20,7 @@ insertListItem();
 inputNewItemElement.value = "";
 
 inputNewItemElement.focus();
+
 });
 
 
